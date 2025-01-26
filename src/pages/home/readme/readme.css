@@ -1,2 +1,36 @@
 .readme {
+  color: var(--color-primary);
+  border-radius: var(--border-radius-2);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h1 {
+    line-height: 1.5;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: var(--padding-1);
+    border: 1px solid var(--color-primary);
+    vertical-align: text-bottom;
+  }
+
+  .text {
+    color: var(--color-secondary);
+  }
+
+  .hg {
+    color: var(--hg-orange);
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+  }
 }

@@ -1,0 +1,34 @@
+.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-4);
+  padding: var(--padding-1) var(--padding-2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  min-width: 50px;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .light {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .dark {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}

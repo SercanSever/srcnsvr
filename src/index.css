@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lexend:wght@100..900&family=Mina:wght@400;700&display=swap");
+
+:root {
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+
+  --font-weight-1: 300;
+  --font-weight-2: 400;
+  --font-weight-3: 500;
+  --font-weight-4: 600;
+  --font-weight-5: 700;
+  --font-weight-6: 800;
+
+  --padding-1: 0.25rem;
+  --padding-2: 0.5rem;
+  --padding-3: 0.75rem;
+  --padding-4: 1rem;
+  --padding-5: 1.25rem;
+  --padding-6: 1.5rem;
+
+  --border-radius-1: 0.25rem;
+  --border-radius-2: 0.5rem;
+  --border-radius-3: 0.75rem;
+  --border-radius-4: 1rem;
+  --border-radius-5: 1.25rem;
+  --border-radius-6: 1.5rem;
+
+  --shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-2: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --shadow-3: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+  --shadow-5: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+  --shadow-6: 0 32px 64px 0 rgba(0, 0, 0, 0.05);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Geist", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  line-height: 1.6;
+  font-size: var(--font-size-md);
+}
+
+.light {
+  --color-primary: #020202;
+  --color-secondary: #ccc4c1;
+  --color-bg: #f8f8f8;
+  --hg-orange: #fb6a09;
+  --hg-green: #07fe85;
+}
+
+.dark {
+  --color-primary: #e6e6e6;
+  --color-secondary: #1c1c1c;
+  --color-bg: #3c3c3c;
+  --cute-oranage: #ff8a3d;
+  --cute-green: #07fe85;
+}
+
+.geist {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geist-bold {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mina {
+  font-family: "Mina", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mina-bold {
+  font-family: "Mina", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lexend-bold {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  outline: none;
+  background-color: var(--color-primary);
+  color: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+a:hover {
+  color: var(--color-primary);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hg {
+  font-family: "Mina", sans-serif;
+}
+
+.hg-bold {
+  font-family: "Mina", sans-serif;
+  font-weight: 700;
+}
+
+p,
+span {
+  font-family: "Lexend", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-1);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cute-oranage);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--cute-green);
+}
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 748px) {
+  .container {
+    max-width: 748px;
+  }
+}

@@ -1,31 +1,40 @@
 import { create } from "zustand";
 
+// Yardımcı Fonksiyon
+const getSystemTheme = () =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
 export const useThemeStore = create((set) => ({
-  currentTheme: localStorage.getItem("theme") || "system",
+  currentTheme: localStorage.getItem("theme") || getSystemTheme(),
   currentThemeName: localStorage.getItem("switch") || "system",
   changeTheme: () => {
     set((state) => {
       let newTheme = "";
       let newThemeName = "";
-      if (state.currentThemeName === "light") {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+
+      switch (state.currentThemeName) {
+        case "light":
+          newTheme = getSystemTheme();
+          newThemeName = "system";
+          break;
+        case "system":
           newTheme = "dark";
-          newThemeName = "system";
-        } else {
+          newThemeName = "dark";
+          break;
+        case "dark":
           newTheme = "light";
+          newThemeName = "light";
+          break;
+        default:
+          newTheme = getSystemTheme();
           newThemeName = "system";
-        }
+          break;
       }
-      if (state.currentThemeName === "system") {
-        newTheme = "dark";
-        newThemeName = "dark";
-      }
-      if (state.currentThemeName === "dark") {
-        newTheme = "light";
-        newThemeName = "light";
-      }
+
+      // LocalStorage güncelle
       localStorage.setItem("theme", newTheme);
       localStorage.setItem("switch", newThemeName);
+
       return { currentTheme: newTheme, currentThemeName: newThemeName };
     });
   },

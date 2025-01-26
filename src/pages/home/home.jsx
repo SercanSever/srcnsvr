@@ -1,5 +1,7 @@
+import "./home.css";
+
 const Home = () => {
-  return <div className="">Home</div>;
+  return <div className="home">Home</div>;
 };
 
 export default Home;

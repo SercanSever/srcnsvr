@@ -10,6 +10,10 @@
     .underline {
       display: none;
     }
+
+    &:hover {
+      color: var(--hg-orange);
+    }
   }
 
   a.active {

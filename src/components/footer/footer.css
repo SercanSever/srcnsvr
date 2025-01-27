@@ -12,6 +12,12 @@
     .footerLinks {
       display: flex;
       gap: 20px;
+
+      a {
+        &:hover {
+          color: var(--hg-orange);
+        }
+      }
     }
   }
 

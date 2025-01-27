@@ -20,7 +20,7 @@ const Experience = () => {
                 excepturi saepe cum sint?
               </p>
             </div>
-            <span className="year">2024 - 2025</span>
+            <span className="year">2024 - Present</span>
           </div>
         </div>
         <div className="content">

@@ -1,5 +1,4 @@
-a {
-  &:hover {
-    color: var(--hg-green);
-  }
+.mail {
+  padding-right: var(--padding-1);
+  color: var(--hg-green);
 }

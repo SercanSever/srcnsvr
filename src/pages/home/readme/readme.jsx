@@ -8,8 +8,8 @@ const Readme = () => {
     <div className="readme">
       <h1>
         Hi, I&apos;m <img src={Man} alt="Avatar" className="avatar" /> Sercan
-        <p className="text">
-          I&apos;m a <span className="hg">Developer</span>
+        <p>
+          I&apos;m a <span>Developer</span>
         </p>
       </h1>
       <div className="contact">

@@ -18,12 +18,12 @@
     vertical-align: text-bottom;
   }
 
-  .text {
+  p {
     color: var(--color-secondary);
-  }
 
-  .hg {
-    color: var(--hg-orange);
+    span {
+      color: var(--hg-orange);
+    }
   }
 
   .contact {

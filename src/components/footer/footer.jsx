@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="copy">
           © {date} Sercan Sever. Built with dedication.
         </div>
-        <div className="stack">
+        <div className="techUse">
           <div className="deploy">
             <p>Build with</p>
             <Link to="https://react.dev/" target="_blank">

@@ -8,10 +8,10 @@ const Footer = () => {
     <div className="footer">
       <div className="top">
         <div className="footerLinks">
-          <Link href="">srcnsvr</Link>
-          <Link href="">repos</Link>
-          <Link href="">stack</Link>
-          <Link href="">projects</Link>
+          <Link to="/">srcnsvr</Link>
+          <Link to="/repos">repos</Link>
+          <Link to="/stack">stack</Link>
+          <Link to="/projects">projects</Link>
         </div>
         <div className="footerTheme">
           <Theme />

@@ -143,7 +143,6 @@ const Stack = () => {
       img: "https://img.icons8.com/color/48/000000/emotion.png",
     },
   ];
-  console.log(Background);
   return (
     <div className="stack">
       <h1>

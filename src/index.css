@@ -55,12 +55,29 @@ body {
   font-size: var(--font-size-md);
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--color-bg-rgb), 0) 0%,
+    rgba(var(--color-bg-rgb), 1) 100%
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .light {
   --color-primary: #020202;
   --color-secondary: #ccc4c1;
   --color-bg: #f8f8f8;
   --hg-orange: #fb6a09;
   --hg-green: #07fe85;
+  --color-bg-rgb: 248, 248, 248;
 }
 
 .dark {
@@ -69,6 +86,7 @@ body {
   --color-bg: #3c3c3c;
   --hg-orange: #ff8a3d;
   --hg-green: #07fe85;
+  --color-bg-rgb: 60, 60, 60;
 }
 
 .geist {

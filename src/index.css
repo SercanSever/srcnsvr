@@ -74,7 +74,7 @@ body::after {
 
 .light {
   --color-primary: #020202;
-  --color-secondary: #ccc4c1;
+  --color-secondary: #777776;
   --color-bg: #f8f8f8;
   --hg-orange: #fb6a09;
   --hg-green: #07fe85;
@@ -83,8 +83,8 @@ body::after {
 
 .dark {
   --color-primary: #e6e6e6;
-  --color-secondary: #1c1c1c;
-  --color-bg: #4d4c4c;
+  --color-secondary: #020202;
+  --color-bg: #4b4b4b;
   --hg-orange: #ff8a3d;
   --hg-green: #07fe85;
   --color-bg-rgb: 60, 60, 60;

@@ -33,8 +33,26 @@
     gap: 20px;
 
     a {
+      position: relative;
+
       &:hover {
         color: var(--hg-orange);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 60%;
+        width: 40%;
+        height: 2px;
+        background-color: var(--color-primary);
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
       }
     }
   }

@@ -22,8 +22,8 @@ const Readme = () => {
             advancing my career, and creating impactful products. Find more
             details about my tech stack on the{" "}
             <a href="/stack" className="lexend-bold">
-              stack{" "}
-            </a>
+              stack
+            </a>{" "}
             page.
           </p>
         </div>

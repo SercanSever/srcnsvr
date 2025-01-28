@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lexend:wght@100..900&family=Mina:wght@400;700&display=swap");
 
 :root {
-  --font-size-xs: 12px;  
-  --font-size-sm: 14px;  
-  --font-size-md: 16px;  
-  --font-size-lg: 18px; 
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
   --font-size-xl: 20px;
   --font-size-2xl: 24px;
 
@@ -22,7 +22,7 @@
   --padding-5: 20px;
   --padding-6: 24px;
 
-  --border-radius-1: 4px
+  --border-radius-1: 4px;
   --border-radius-2: 8px;
   --border-radius-3: 12px;
   --border-radius-4: 16px;
@@ -77,17 +77,19 @@ body::after {
   --color-secondary: #777776;
   --color-bg: #f8f8f8;
   --hg-orange: #fb6a09;
-  --hg-green: #07fe85;
+  --hg-green: #49de80;
   --color-bg-rgb: 248, 248, 248;
 }
 
 .dark {
   --color-primary: #e6e6e6;
-  --color-secondary: #020202;
-  --color-bg: #4b4b4b;
+  --color-secondary: #a3a3a3;
+  /* --color-secondary: #bfbfbf; */
+  /* --color-secondary: #d4d4d4; */
+  --color-bg: #27272a;
   --hg-orange: #ff8a3d;
-  --hg-green: #07fe85;
-  --color-bg-rgb: 60, 60, 60;
+  --hg-green: #49de80;
+  --color-bg-rgb: 39, 39, 42;
 }
 
 .geist {

@@ -9,9 +9,9 @@ const Footer = () => {
       <div className="top">
         <div className="footerLinks">
           <Link to="/">srcnsvr</Link>
-          <Link to="/repos">repos</Link>
-          <Link to="/stack">stack</Link>
           <Link to="/projects">projects</Link>
+          <Link to="/stack">stack</Link>
+          <Link to="/posts">posts</Link>
         </div>
         <div className="footerTheme">
           <Theme />

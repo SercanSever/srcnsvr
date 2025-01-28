@@ -2,14 +2,15 @@
   display: flex;
   gap: 20px;
   font-size: var(--font-size-md);
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--hg-orange);
   padding: var(--padding-1) var(--padding-6);
   border-radius: var(--border-radius-4);
 
   a {
-    .underline {
-      display: none;
-    }
+    position: relative;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
 
     &:hover {
       color: var(--hg-orange);
@@ -18,20 +19,30 @@
 
   a.active {
     color: var(--color-primary);
+
     .text {
       position: relative;
 
       p {
         position: relative;
-        z-index: 10;
+        z-index: 1;
       }
 
-      .underline {
-        display: block;
+      &::after {
+        content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         left: 0;
-        transform: translateY(-60%);
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          var(--hg-orange),
+          var(--hg-green),
+          var(--hg-orange)
+        );
+        box-shadow: 0 4px 15px var(--hg-green);
+        border-radius: 5px;
         z-index: 0;
       }
     }

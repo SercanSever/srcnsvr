@@ -15,6 +15,28 @@
     }
   }
 
+  .searchTabConteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    gap: 10px;
+
+    .tab {
+      border: 1px solid var(--hg-orange);
+      border-radius: var(--border-radius-3);
+      padding: 0 var(--padding-5);
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: var(--hg-orange);
+        color: var(--color-bg);
+      }
+    }
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -26,8 +48,8 @@
     }
 
     .cardList {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
       justify-content: start;
       width: 100%;
       gap: 5px;
@@ -38,10 +60,11 @@
         align-items: center;
         position: relative;
         padding: var(--padding-1);
-        background-color: var(--hg-orange);
+        background-color: transparent;
         border-radius: var(--border-radius-4);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
         overflow: hidden;
         filter: grayscale(100%);
       }
@@ -53,15 +76,15 @@
         transform: rotate(5deg);
       }
 
-      .polaroid img {
-        width: 70px;
-        height: 80px;
+      .polaroid .icon {
+        width: 110px;
+        height: 110px;
         object-fit: cover;
         border-radius: var(--border-radius-3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .polaroid:hover img {
+      .polaroid:hover .icon {
         transform: scale(1.2);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
@@ -79,10 +102,12 @@
         padding: var(--padding-1) 0;
         border-radius: var(--border-radius-3);
         transition: background-color 0.3s ease;
+        display: none;
       }
 
       .polaroid:hover .cardTitle {
         background-color: var(--hg-green);
+        display: block;
       }
     }
   }

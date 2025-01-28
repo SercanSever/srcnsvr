@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Footer from "./components/footer/footer";
 import { useScrollStore } from "./stores/scroll";
 import Stack from "./pages/stack/stack";
+import Projects from "./pages/projects/projects";
 
 function App() {
   const { currentTheme } = useThemeStore();
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stack" element={<Stack />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>
       <Footer />

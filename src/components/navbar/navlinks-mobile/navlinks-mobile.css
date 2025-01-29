@@ -18,7 +18,7 @@
   border-top-right-radius: var(--border-radius-5);
   -webkit-overflow-scrolling: touch;
   will-change: transform;
-  transition: transform 0.1s linear;
+  transition: transform 0.02s linear;
 
   &.open {
     transform: translateY(0);

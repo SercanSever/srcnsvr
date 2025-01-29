@@ -8,10 +8,13 @@ import Footer from "./components/footer/footer";
 import { useScrollStore } from "./stores/scroll";
 import Stack from "./pages/stack/stack";
 import Projects from "./pages/projects/projects";
+import NavlinksMobile from "./components/navbar/navlinks-mobile/navlinks-mobile";
+import { useNavMobileStore } from "./stores/nav-mobile";
 
 function App() {
   const { currentTheme } = useThemeStore();
   const { updateScroll } = useScrollStore();
+  const { isOpen } = useNavMobileStore();
   useEffect(() => {
     document.documentElement.className = currentTheme;
   }, [currentTheme]);
@@ -20,9 +23,7 @@ function App() {
     const handleScroll = () => {
       updateScroll(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="container">
       <Navbar />
+      {isOpen && <NavlinksMobile />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -6,7 +6,7 @@ const Navlinks = () => {
     <div className="routes">
       <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
         <span className="text">
-          <p>srcnsvr</p>
+          <p>home</p>
         </span>
       </NavLink>
       <NavLink
@@ -31,6 +31,14 @@ const Navlinks = () => {
       >
         <span className="text">
           <p>posts</p>
+        </span>
+      </NavLink>
+      <NavLink
+        to="/workspace"
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        <span className="text">
+          <p>workspace</p>
         </span>
       </NavLink>
     </div>

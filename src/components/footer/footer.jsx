@@ -8,10 +8,11 @@ const Footer = () => {
     <div className="footer">
       <div className="top">
         <div className="footerLinks">
-          <Link to="/">srcnsvr</Link>
+          <Link to="/">home</Link>
           <Link to="/projects">projects</Link>
           <Link to="/stack">stack</Link>
           <Link to="/posts">posts</Link>
+          <Link to="/workspace">workspace</Link>
         </div>
         <div className="footerTheme">
           <Theme />

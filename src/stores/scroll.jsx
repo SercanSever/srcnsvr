@@ -4,7 +4,7 @@ export const useScrollStore = create((set) => ({
   isScrolled: false,
   updateScroll: (scrollY) => {
     set({
-      isScrolled: scrollY >= 100,
+      isScrolled: scrollY >= 80,
     });
   },
 }));

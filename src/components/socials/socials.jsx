@@ -22,7 +22,6 @@ const Socials = () => {
           github
         </a>
       </div>
-
       <div className="social">
         <a href="">
           <svg
@@ -43,7 +42,6 @@ const Socials = () => {
           linkedin
         </a>
       </div>
-
       <div className="social">
         <a href="">
           <svg

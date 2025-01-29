@@ -24,9 +24,6 @@
       display: block;
     }
 
-    @media (min-width: 480px) {
-    }
-
     @media (min-width: 748px) {
       display: none;
     }

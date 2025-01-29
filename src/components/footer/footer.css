@@ -34,7 +34,7 @@
 
     .techUse {
       display: flex;
-      gap: 15px;
+      gap: 20px;
 
       .deploy {
         display: flex;
@@ -56,6 +56,42 @@
           &:hover {
             color: var(--hg-green);
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 748px) {
+    .top {
+      .footerLinks {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .footerTheme {
+        margin-top: auto;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      gap: 20px;
+
+      .copy {
+        margin-right: auto;
+      }
+
+      .techUse {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: auto;
+
+        .deploy {
+          font-size: var(--font-size-xs);
         }
       }
     }

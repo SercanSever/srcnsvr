@@ -19,9 +19,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="bottom">
-        <div className="copy">
-          © {date} Sercan Sever. Built with dedication.
-        </div>
         <div className="techUse">
           <div className="deploy">
             <p>Build with</p>
@@ -95,6 +92,9 @@ const Footer = () => {
               </svg>
             </Link>
           </div>
+        </div>
+        <div className="copy">
+          © {date} Sercan Sever. Built with dedication.
         </div>
       </div>
     </div>

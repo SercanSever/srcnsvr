@@ -26,11 +26,11 @@ const Navlinks = () => {
         </span>
       </NavLink>
       <NavLink
-        to="/posts"
+        to="/components"
         className={({ isActive }) => (isActive ? "active" : "")}
       >
         <span className="text">
-          <p>posts</p>
+          <p>components</p>
         </span>
       </NavLink>
       <NavLink

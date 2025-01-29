@@ -15,18 +15,18 @@ const Stack = () => {
         stay organized.
       </p>
       <div className="searchTabConteiner">
-        <div className="tab">all</div>
-        <div className="tab">backend</div>
-        <div className="tab">frontend</div>
-        <div className="tab">db</div>
-        <div className="tab">tools</div>
-        <div className="tab">ai</div>
-        <div className="tab">other</div>
-        <div className="tab">frontend</div>
-        <div className="tab">db</div>
-        <div className="tab">tools</div>
-        <div className="tab">ai</div>
-        <div className="tab">other</div>
+        <button className="tab">all</button>
+        <button className="tab">backend</button>
+        <button className="tab">frontend</button>
+        <button className="tab">db</button>
+        <button className="tab">tools</button>
+        <button className="tab">ai</button>
+        <button className="tab">other</button>
+        <button className="tab">frontend</button>
+        <button className="tab">db</button>
+        <button className="tab">tools</button>
+        <button className="tab">ai</button>
+        <button className="tab">other</button>
       </div>
       <div className="wrapper">
         <div className="cardList">

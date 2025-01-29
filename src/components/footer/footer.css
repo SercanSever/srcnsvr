@@ -28,10 +28,6 @@
     align-items: center;
     padding-bottom: var(--padding-6);
 
-    .copy {
-      font-size: var(--font-size-sm);
-    }
-
     .techUse {
       display: flex;
       gap: 20px;

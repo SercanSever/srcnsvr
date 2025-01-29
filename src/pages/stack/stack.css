@@ -27,8 +27,9 @@
     .tab {
       border: 1px solid var(--hg-orange);
       border-radius: var(--border-radius-3);
-      padding: 0 var(--padding-5);
+      padding: var(--padding-1) var(--padding-6);
       transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: var(--font-size-sm);
 
       &:hover {
         background-color: var(--hg-orange);
@@ -79,14 +80,14 @@
       .polaroid .icon {
         width: 110px;
         height: 110px;
+        padding: var(--padding-5);
         object-fit: cover;
         border-radius: var(--border-radius-3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease;
       }
 
       .polaroid:hover .icon {
         transform: scale(1.2);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
 
       .cardTitle {

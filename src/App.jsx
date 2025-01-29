@@ -8,6 +8,7 @@ import Footer from "./components/footer/footer";
 import { useScrollStore } from "./stores/scroll";
 import Stack from "./pages/stack/stack";
 import Projects from "./pages/projects/projects";
+import ScrollToTop from "./components/scroll-top/scroll-top";
 
 // import { useNavMobileStore } from "./stores/nav-mobile";
 
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <div className="container">
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>

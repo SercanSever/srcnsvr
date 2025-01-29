@@ -3,7 +3,6 @@ import Theme from "../navbar/theme/theme";
 import "./footer.css";
 
 const Footer = () => {
-  const date = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="top">
@@ -11,7 +10,7 @@ const Footer = () => {
           <Link to="/">home</Link>
           <Link to="/projects">projects</Link>
           <Link to="/stack">stack</Link>
-          <Link to="/posts">posts</Link>
+          <Link to="/components">components</Link>
           <Link to="/workspace">workspace</Link>
         </div>
         <div className="footerTheme">
@@ -92,9 +91,6 @@ const Footer = () => {
               </svg>
             </Link>
           </div>
-        </div>
-        <div className="copy">
-          © {date} Sercan Sever. Built with dedication.
         </div>
       </div>
     </div>

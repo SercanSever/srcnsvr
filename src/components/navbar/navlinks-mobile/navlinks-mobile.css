@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: 30%;
+  top: 40%;
   color: white;
   width: 100%;
   font-size: var(--font-size-xl);
@@ -18,7 +18,7 @@
   border-top-right-radius: var(--border-radius-5);
   -webkit-overflow-scrolling: touch;
   will-change: transform;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.1s linear;
 
   &.open {
     transform: translateY(0);

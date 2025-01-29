@@ -5,10 +5,12 @@ import Theme from "./theme/theme.jsx";
 import { useLocation } from "react-router-dom";
 import { useScrollStore } from "../../stores/scroll.jsx";
 import { useNavMobileStore } from "../../stores/nav-mobile.jsx";
+import { useRef } from "react";
 
 const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const menuOpenRef = useRef();
   const { isScrolled } = useScrollStore();
   const { toggleNav, isOpen } = useNavMobileStore();
 
@@ -16,9 +18,14 @@ const Navbar = () => {
     <nav className={`navbar ${!isScrolled && isHomePage ? "sticky" : ""}`}>
       <Logo />
       <Navlinks />
-      <button className="menu" disabled={isOpen} onClick={toggleNav}>
+      <div
+        ref={menuOpenRef}
+        className="menu"
+        disabled={isOpen ? true : false}
+        onClick={toggleNav}
+      >
         Menu
-      </button>
+      </div>
       <Theme />
     </nav>
   );

@@ -14,12 +14,12 @@
   }
 
   .menu {
-    display: none;
     border: none;
     outline: none;
     margin-left: auto;
     background-color: transparent;
     padding-right: var(--padding-6);
+    cursor: pointer;
 
     @media (min-width: 320px) {
       display: block;

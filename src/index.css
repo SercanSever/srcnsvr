@@ -223,7 +223,7 @@ span {
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
   transition: background 0.3s ease-in-out;
-  pointer-events: none;
+  /* pointer-events: none; */
 
   @media (min-width: 748px) {
     display: none;

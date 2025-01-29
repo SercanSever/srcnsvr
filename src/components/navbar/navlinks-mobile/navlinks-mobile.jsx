@@ -22,9 +22,12 @@ const NavlinksMobile = () => {
 
   const handleTouchEnd = () => {
     if (translateY > 250) {
-      toggleNav();
-    }
-    setTranslateY(0);
+      setTranslateY(700);
+      setTimeout(() => {
+        toggleNav();
+        setTranslateY(0);
+      }, 200);
+    } else setTranslateY(0);
   };
 
   useEffect(() => {
@@ -35,15 +38,21 @@ const NavlinksMobile = () => {
     }
   }, [isOpen]);
 
-  // useEffect(() => {
-  //   const handleClick = (e) => {
-  //     if (isOpen && !menuRef.current.contains(e.target)) {
-  //       toggleNav();
-  //     }
-  //   };
-  //   document.addEventListener("click", handleClick);
-  //   return () => document.removeEventListener("click", handleClick);
-  // }, [isOpen, toggleNav]);
+  useEffect(() => {
+    const handleToggle = (e) => {
+      if (
+        isOpen &&
+        !menuRef.current.contains(e.target) &&
+        e.target.className !== "menu"
+      ) {
+        toggleNav();
+      }
+    };
+    document.addEventListener("click", handleToggle);
+    return () => {
+      document.removeEventListener("click", handleToggle);
+    };
+  }, [isOpen, toggleNav]);
 
   return (
     <div

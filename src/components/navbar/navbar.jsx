@@ -16,11 +16,7 @@ const Navbar = () => {
     <nav className={`navbar ${!isScrolled && isHomePage ? "sticky" : ""}`}>
       <Logo />
       <Navlinks />
-      <button
-        className="menu"
-        disabled={isOpen ? true : false}
-        onClick={toggleNav}
-      >
+      <button className="menu" disabled={isOpen} onClick={toggleNav}>
         Menu
       </button>
       <Theme />

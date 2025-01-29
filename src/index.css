@@ -72,6 +72,11 @@ body::after {
   scroll-behavior: smooth;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* Ekranı tamamen kaplasın */
+}
+
 .light {
   --color-primary: #020202;
   --color-secondary: #777776;
@@ -206,5 +211,21 @@ span {
 @media (min-width: 748px) {
   .container {
     max-width: 748px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: background 0.3s ease-in-out;
+  pointer-events: none;
+
+  @media (min-width: 748px) {
+    display: none;
   }
 }

@@ -14,7 +14,20 @@
   color: white;
   width: 100%;
   font-size: var(--font-size-xl);
-  border: 1px solid var(--color-primary);
+  border-top-left-radius: var(--border-radius-5);
+  border-top-right-radius: var(--border-radius-5);
+  -webkit-overflow-scrolling: touch;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  &:not(.open) {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
 
   .scroll {
     width: 20%;

@@ -4,12 +4,22 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import NavlinksMobile from "./components/navbar/navlinks-mobile/navlinks-mobile.jsx";
+import { useNavMobileStore } from "./stores/nav-mobile.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Analytics />
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+export function Root() {
+  const { isOpen } = useNavMobileStore();
+
+  return (
+    <StrictMode>
+      <BrowserRouter>
+        <Analytics />
+        <div className={`${isOpen ? "overlay" : ""}`} />
+        <App />
+        <NavlinksMobile />
+      </BrowserRouter>
+    </StrictMode>
+  );
+}
+
+createRoot(document.getElementById("root")).render(<Root />);

@@ -68,3 +68,20 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .content {
+    .experienceItem {
+      padding-left: var(--padding-2);
+
+      .text {
+        .title {
+          font-size: var(--font-size-md);
+        }
+        .info {
+          font-size: var(--font-size-sm);
+        }
+      }
+    }
+  }
+}

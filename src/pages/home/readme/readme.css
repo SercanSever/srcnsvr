@@ -57,3 +57,11 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .readme {
+    .contact {
+      font-size: var(--font-size-md);
+    }
+  }
+}

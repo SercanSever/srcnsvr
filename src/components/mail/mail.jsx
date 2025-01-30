@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import "./mail.css";
-const Mail = () => {
+import PropTypes from "prop-types";
+const Mail = ({ mail }) => {
   return (
     <>
-      <Link to={"mailto:info@srcnsvr.dev"} className="lexend-bold mail">
-        info@srcnsvr.dev
+      <Link to={`mailto:${mail}`} className="lexend-bold mail">
+        {mail}
       </Link>
     </>
   );
+};
+
+Mail.propTypes = {
+  mail: PropTypes.string.isRequired,
 };
 
 export default Mail;

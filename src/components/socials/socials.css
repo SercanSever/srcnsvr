@@ -10,16 +10,16 @@
     gap: 5px;
   }
 }
-
+/* 
 @media (min-width: 320px) {
-  a svg {
+  a .socialSvg {
     display: none;
   }
-}
+} */
 
-@media (min-width: 480px) {
-  a svg {
-    display: block;
+@media (max-width: 480px) {
+  a .socialSvg {
+    display: none;
   }
 }
 

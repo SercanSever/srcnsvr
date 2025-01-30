@@ -26,14 +26,6 @@ const Navlinks = () => {
         </span>
       </NavLink>
       <NavLink
-        to="/components"
-        className={({ isActive }) => (isActive ? "active" : "")}
-      >
-        <span className="text">
-          <p>components</p>
-        </span>
-      </NavLink>
-      <NavLink
         to="/workspace"
         className={({ isActive }) => (isActive ? "active" : "")}
       >

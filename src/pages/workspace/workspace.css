@@ -1,0 +1,75 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h1 {
+    line-height: 1.5;
+  }
+
+  p {
+    color: var(--color-secondary);
+
+    span {
+      color: var(--hg-orange);
+    }
+  }
+
+  .setupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .setup {
+      .item {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        .image {
+          opacity: 0;
+          transition: all 0.3s ease;
+
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+          }
+        }
+
+        .brand {
+          color: var(--color-primary);
+          font-weight: var(--font-weight-2);
+        }
+
+        .model {
+          color: var(--color-secondary);
+          font-size: var(--font-size-sm);
+        }
+      }
+      .underline {
+        width: 30%;
+        height: 1px;
+        background-color: var(--color-secondary);
+        transition: all 0.3s ease;
+
+        @media (max-width: 480px) {
+          width: 60%;
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+          width: 40%;
+        }
+      }
+
+      &:hover {
+        .image {
+          opacity: 1;
+        }
+        .underline {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

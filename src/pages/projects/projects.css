@@ -78,9 +78,6 @@
         &:hover {
           color: var(--hg-green);
         }
-
-        svg {
-        }
       }
     }
   }

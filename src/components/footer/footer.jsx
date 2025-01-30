@@ -10,7 +10,6 @@ const Footer = () => {
           <Link to="/">home</Link>
           <Link to="/projects">projects</Link>
           <Link to="/stack">stack</Link>
-          <Link to="/components">components</Link>
           <Link to="/workspace">workspace</Link>
         </div>
         <div className="footerTheme">

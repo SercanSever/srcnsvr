@@ -5,9 +5,9 @@ const Projects = () => {
   return (
     <div className="projects">
       <h1>
-        Repositories & Experiments
+        My Work
         <p className="text">
-          Building. Breaking. Fixing. <span>Repeat.</span>
+          Code & <span>Side Quests</span>
         </p>
       </h1>
       <p className="text">

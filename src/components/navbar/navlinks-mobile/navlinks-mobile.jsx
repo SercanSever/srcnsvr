@@ -73,9 +73,6 @@ const NavlinksMobile = () => {
       <NavLink to="/stack" onClick={toggleNav}>
         stack
       </NavLink>
-      <NavLink to="/post" onClick={toggleNav}>
-        post
-      </NavLink>
       <NavLink to="/workspace" onClick={toggleNav}>
         workspace
       </NavLink>

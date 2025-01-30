@@ -7,11 +7,3 @@ export const getReadMeContent = async () => {
   }
   return data;
 };
-
-export const getSocials = async () => {
-  var { data, error } = await supabase.from("social").select();
-  if (error) {
-    throw new Error(`Error fetching socials: ${error.message}`);
-  }
-  return data;
-};

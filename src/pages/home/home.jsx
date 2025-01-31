@@ -1,6 +1,6 @@
-import Experience from "./experience/experience.jsx";
+import Experience from "../../components/experience/experience.jsx";
 import "./home.css";
-import Readme from "./readme/readme.jsx";
+import Readme from "../../components/readme/readme.jsx";
 
 const Home = () => {
   return (

@@ -1,128 +1,55 @@
 import "./workspace.css";
-import Man from "../../assets/man.png";
+import {
+  getWorkspaceContent,
+  getWorkspaceList,
+} from "../../data/workspace/workspace-repository";
+import { useEffect, useState } from "react";
 
 const Workspace = () => {
+  const [workspaceContent, setWorkspaceContent] = useState({});
+  const [workspaceList, setWorkspaceList] = useState([]);
+  const fetchWorkspaceContent = async () => {
+    try {
+      const [workspaceContent, workspaceList] = await Promise.all([
+        getWorkspaceContent(),
+        getWorkspaceList(),
+      ]);
+      setWorkspaceContent(workspaceContent[0]);
+      setWorkspaceList(workspaceList);
+    } catch (error) {
+      console.error("Error fetching workspace content:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWorkspaceContent();
+  }, []);
+
   return (
     <div className="workspace">
       <h1>
-        Setup
+        {workspaceContent.title}
         <p className="text">
-          Respowning <span>Spot</span>
+          {workspaceContent.subtitle} <span>{workspaceContent.subtitle2}</span>
         </p>
       </h1>
-      <p className="text">
-        The tech and accessories that help me code, create, and stay focused.
-      </p>
+      <p className="text">{workspaceContent.description}</p>
 
       <div className="setupContainer">
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
+        {workspaceList.map((item) => (
+          <div className="setup" key={item.id}>
+            <div className="item">
+              <div className="info">
+                <p className="brand">{item.brand}</p>
+                <p className="model">{item.model}</p>
+              </div>
+              <div className="image">
+                <img src={item.image_url} alt="" />
+              </div>
             </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
+            <div className="underline"></div>
           </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
-        <div className="setup">
-          <div className="item">
-            <div className="info">
-              <p className="brand">LG</p>
-              <p className="model">34&quot; UltraWide Monitor</p>
-            </div>
-            <div className="image">
-              <img src={Man} alt="" />
-            </div>
-          </div>
-          <div className="underline"></div>
-        </div>
+        ))}
       </div>
     </div>
   );

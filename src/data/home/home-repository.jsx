@@ -1,9 +1,9 @@
-import { supabase } from "../client/supabaseClient";
+import { get } from "../base-repository";
 
 export const getReadMeContent = async () => {
-  var { data, error } = await supabase.from("readme").select();
-  if (error) {
-    throw new Error(`Error fetching README content: ${error.message}`);
-  }
-  return data;
+  return await get("readme");
+};
+
+export const getExperienceContent = async () => {
+  return await get("experience", "order", "ascending", true);
 };

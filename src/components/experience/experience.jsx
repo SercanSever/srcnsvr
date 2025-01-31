@@ -1,4 +1,4 @@
-import ExperienceList from "../../../components/experience-list/experience-list";
+import ExperienceList from "../experience-list/experience-list";
 import "./experience.css";
 const Experience = () => {
   return (

@@ -1,8 +1,8 @@
 import "./readme.css";
-import Man from "../../../assets/man.png";
-import Socials from "../../../components/socials/socials";
-import Mail from "../../../components/mail/mail";
-import { getReadMeContent } from "../../../data/home/home-repository";
+import Man from "../../assets/man.png";
+import Socials from "../socials/socials";
+import Mail from "../mail/mail";
+import { getReadMeContent } from "../../data/home/home-repository";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 

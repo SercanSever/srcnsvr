@@ -81,7 +81,7 @@
         width: 110px;
         height: 110px;
         padding: var(--padding-5);
-        object-fit: cover;
+        object-fit: contain;
         border-radius: var(--border-radius-3);
         transition: transform 0.3s ease;
       }

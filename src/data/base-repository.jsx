@@ -18,3 +18,11 @@ export const get = async (table, orderName, orderType, orderValue) => {
   }
   return data;
 };
+
+export const getColumn = async (table, column) => {
+  const { data, error } = await supabase.from(table).select(column);
+  if (error) {
+    throw new Error(`Error fetching ${table} content: ${error.message}`);
+  }
+  return data;
+};

@@ -1,4 +1,8 @@
-import { get } from "../base-repository";
+import { get, getColumn } from "../base-repository";
+
+export const getProfilePhoto = async () => {
+  return await getColumn("readme", "avatar_url");
+};
 
 export const getReadMeContent = async () => {
   return await get("readme");

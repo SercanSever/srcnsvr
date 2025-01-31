@@ -1,5 +1,4 @@
 import { NavLink, useLocation } from "react-router-dom";
-import Man from "../../../assets/man.png";
 import "./logo.css";
 
 const Logo = () => {
@@ -9,7 +8,7 @@ const Logo = () => {
   return (
     <div className={`logo ${isHomePage ? "logoHome" : ""}`}>
       <NavLink to={"/"}>
-        <img src={Man} alt="profile-photo" />
+        <img src="" alt="profile-photo" />
       </NavLink>
     </div>
   );

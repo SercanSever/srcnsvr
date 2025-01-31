@@ -49,7 +49,6 @@ const Stack = () => {
     fetchStackList();
   }, [fetchStackList]);
 
-  console.log(stackList);
   return (
     <div className="stack">
       <h1>
@@ -79,7 +78,7 @@ const Stack = () => {
           {stackList.map((item) => (
             <div className="polaroid" key={item.id}>
               <img src={item.imageUrl} alt="" className="icon" />
-              <Link to="/" className="cardTitle">
+              <Link to={item.url} className="cardTitle" target="_blank">
                 {item.name}
               </Link>
             </div>

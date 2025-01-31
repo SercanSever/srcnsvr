@@ -24,7 +24,6 @@ const Projects = () => {
     fetchProjectContent();
   }, []);
 
-  console.log(projectList);
   return (
     <div className="projects">
       <h1>
@@ -38,7 +37,7 @@ const Projects = () => {
       <div className="projectsContainer">
         {projectList.map((project) => (
           <div className="project" key={project.id}>
-            <img src={project.img_url || "/github2.png"} alt="" />
+            <img src={project.img_url} alt="" />
             <div className="content">
               <div className="title">
                 <h2>{project.name}</h2>

@@ -1,5 +1,4 @@
 import "./readme.css";
-import Man from "../../assets/man.png";
 import Socials from "../socials/socials";
 import Mail from "../mail/mail";
 import { getReadMeContent } from "../../data/home/home-repository";
@@ -24,7 +23,8 @@ const Readme = () => {
   return (
     <div className="readme">
       <h1>
-        {readMeContent.title} <img src={Man} alt="Avatar" className="avatar" />{" "}
+        {readMeContent.title}{" "}
+        <img src={readMeContent.avatar_url} alt="Avatar" className="avatar" />{" "}
         {readMeContent.title2}
         <p>
           {readMeContent.sub_title} <span>{readMeContent.sub_title2}</span>

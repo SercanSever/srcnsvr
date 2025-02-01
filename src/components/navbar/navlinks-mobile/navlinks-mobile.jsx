@@ -64,16 +64,32 @@ const NavlinksMobile = () => {
       style={{ transform: `translateY(${translateY}px)` }}
     >
       <div className="scroll"></div>
-      <NavLink to="/" onClick={toggleNav}>
+      <NavLink
+        to="/"
+        onClick={toggleNav}
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
         home
       </NavLink>
-      <NavLink to="/projects" onClick={toggleNav}>
+      <NavLink
+        to="/projects"
+        onClick={toggleNav}
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
         projects
       </NavLink>
-      <NavLink to="/stack" onClick={toggleNav}>
+      <NavLink
+        to="/stack"
+        onClick={toggleNav}
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
         stack
       </NavLink>
-      <NavLink to="/workspace" onClick={toggleNav}>
+      <NavLink
+        to="/workspace"
+        onClick={toggleNav}
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
         workspace
       </NavLink>
     </div>

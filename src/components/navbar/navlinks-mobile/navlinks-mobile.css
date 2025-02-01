@@ -29,6 +29,29 @@
     visibility: hidden;
   }
 
+  a.active {
+    color: var(--color-primary);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        var(--color-secondary),
+        var(--hg-green),
+        var(--color-secondary)
+      );
+      box-shadow: 0 4px 15px var(--hg-green);
+      border-radius: 10px;
+      z-index: 0;
+    }
+  }
+
   .scroll {
     width: 20%;
     height: 8px;

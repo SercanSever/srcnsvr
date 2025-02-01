@@ -40,7 +40,7 @@ const Readme = () => {
           </p>
         </div>
         <p>
-          <Mail mail={readMeContent.mail || "info@srcnsvr.dev"} />
+          <Mail mail={readMeContent.mail || "info@srcnsvr.com"} />
           {readMeContent.content2}
         </p>
         <p>{readMeContent.social_description}</p>

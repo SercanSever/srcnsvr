@@ -11,6 +11,7 @@ import Projects from "./pages/projects/projects";
 import ScrollToTop from "./components/scroll-top/scroll-top";
 import Workspace from "./pages/workspace/workspace";
 import NotFound from "./pages/404";
+import { HelmetProvider } from 'react-helmet-async';
 
 // import { useNavMobileStore } from "./stores/nav-mobile";
 
@@ -33,7 +34,7 @@ function App() {
   }, [updateScroll]);
 
   return (
-    <>
+    <HelmetProvider prioritizeSeoTags>
       <div className="container">
         <ScrollToTop />
         <Navbar />
@@ -48,7 +49,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </HelmetProvider>
   );
 }
 

@@ -10,22 +10,16 @@
     gap: 5px;
     color: var(--color-secondary);
 
-    img {
+    .socialSvg {
       width: 20px;
       height: 20px;
       object-fit: cover;
     }
   }
 }
-/* 
-@media (min-width: 320px) {
-  a .socialSvg {
-    display: none;
-  }
-} */
 
 @media (max-width: 480px) {
-  a img {
+  a .socialSvg {
     display: none;
   }
 }

@@ -1,4 +1,40 @@
+# www.srcnsvr.com robots.txt
+
+# All robots allowed
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*?*
 
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.xml
+
+User-agent: Googlebot-Image
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.xml
+
+# Crawl delay
+Crawl-delay: 10
+
+# Sitemaps
 Sitemap: https://www.srcnsvr.com/sitemap.xml
+Sitemap: https://www.srcnsvr.com/image-sitemap.xml
+
+# Host
+Host: https://www.srcnsvr.com

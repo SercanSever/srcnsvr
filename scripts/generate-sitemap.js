@@ -1,25 +1,21 @@
-import { createWriteStream } from "fs";
-import { SitemapStream, streamToPromise } from "sitemap";
+// scripts/generate-sitemap.js
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { createWriteStream } from 'fs';
+import { Readable } from 'stream';
 
-const hostname = "https://srcnsvr.com";
-
-const urls = [
-  { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/projects", changefreq: "monthly", priority: 0.8 },
-  { url: "/stack", changefreq: "monthly", priority: 0.8 },
-  { url: "/workspace", changefreq: "monthly", priority: 0.8 },
+const links = [
+  { url: '/', changefreq: 'daily', priority: 1 },
+  { url: '/projects', changefreq: 'weekly', priority: 0.8 },
+  { url: '/about', changefreq: 'monthly', priority: 0.7 },
+  { url: '/contact', changefreq: 'monthly', priority: 0.7 },
 ];
 
-async function generateSitemap() {
-  const sitemap = new SitemapStream({ hostname });
+const dynamicPages = []; 
 
-  urls.forEach((entry) => sitemap.write(entry));
-  sitemap.end();
+const stream = new SitemapStream({ hostname: 'https://srcnsvr.com' });
+const data = [...links, ...dynamicPages];
 
-  const sitemapData = await streamToPromise(sitemap);
-  createWriteStream("./public/sitemap.xml").write(sitemapData);
-
-  console.log("✅ Sitemap oluşturuldu: public/sitemap.xml");
-}
-
-generateSitemap();
+streamToPromise(Readable.from(data).pipe(stream))
+  .then((sitemap) => 
+    createWriteStream('./public/sitemap.xml').write(sitemap.toString())
+  );

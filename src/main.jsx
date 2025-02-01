@@ -6,18 +6,21 @@ import { BrowserRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import NavlinksMobile from "./components/navbar/navlinks-mobile/navlinks-mobile.jsx";
 import { useNavMobileStore } from "./stores/nav-mobile.jsx";
+import { HelmetProvider } from 'react-helmet-async';
 
 export function Root() {
   const { isOpen } = useNavMobileStore();
 
   return (
     <StrictMode>
-      <BrowserRouter>
-        <Analytics />
-        <div className={`${isOpen ? "overlay" : ""}`} />
-        <App />
-        <NavlinksMobile />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <Analytics />
+          <div className={`${isOpen ? "overlay" : ""}`} />
+          <App />
+          <NavlinksMobile />
+        </BrowserRouter>
+      </HelmetProvider>
     </StrictMode>
   );
 }

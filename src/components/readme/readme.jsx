@@ -4,6 +4,8 @@ import Mail from "../mail/mail";
 import { getReadMeContent } from "../../data/home/home-repository";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ProfilePhoto from "/profile.webp";
+
 
 const Readme = () => {
   const [readMeContent, setReadMeContent] = useState({});
@@ -24,7 +26,7 @@ const Readme = () => {
     <div className="readme">
       <h1>
         {readMeContent.title}{" "}
-        <img src={readMeContent.avatar_url} alt="Avatar" className="avatar" />{" "}
+        <img src={readMeContent.avatar_url || ProfilePhoto} alt="profile-photo" className="avatar" />{" "}
         {readMeContent.title2}
         <p>
           {readMeContent.sub_title} <span>{readMeContent.sub_title2}</span>

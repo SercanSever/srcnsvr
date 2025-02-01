@@ -2,6 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import "./logo.css";
 import { getProfilePhoto } from "../../../data/home/home-repository";
 import { useEffect, useState } from "react";
+import ProfilePhoto from "/profile.webp";
 
 const Logo = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const Logo = () => {
   return (
     <div className={`logo ${isHomePage ? "logoHome" : ""}`}>
       <NavLink to={"/"}>
-        <img src={profilePhoto.avatar_url} alt="profile-photo" />
+        <img src={profilePhoto.avatar_url || ProfilePhoto} alt="profile-photo" />
       </NavLink>
     </div>
   );

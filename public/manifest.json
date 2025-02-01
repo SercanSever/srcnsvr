@@ -1,0 +1,21 @@
+{
+  "name": "Sercan Sever Portfolio",
+  "short_name": "SS Portfolio",
+  "description": "Full Stack Developer Portfolio of Sercan Sever",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f8f8",
+  "theme_color": "#020202",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

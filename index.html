@@ -3,9 +3,82 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="application-name" content="Sercan Sever Portfolio">
+  <meta name="apple-mobile-web-app-title" content="Sercan Sever Portfolio">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/webp" sizes="32x32" href="/profile.webp" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sercan Sever | Full Stack Developer | .NET Core | React | Node.js</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#020202">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- Performance Meta Tags -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
+  <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preload" href="/src/main.jsx" as="script">
+  <link rel="preload" href="/profile.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/src/index.css" as="style">
+  <link rel="prefetch" href="/projects">
+  <link rel="prefetch" href="/stack">
+  <link rel="prefetch" href="/workspace">
+
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
+
+  <!-- PWA Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://srcnsvr.com/#person",
+          "name": "Sercan Sever",
+          "jobTitle": "Full Stack Developer",
+          "description": "Full Stack Developer specializing in .NET Core, React, and Node.js",
+          "image": "https://srcnsvr.com/profile.webp",
+          "url": "https://srcnsvr.com",
+          "sameAs": [
+            "https://github.com/sercansever",
+            "https://www.linkedin.com/in/sercan-sever-a97147202"
+          ],
+          "knowsAbout": [
+            ".NET Core",
+            "React",
+            "Node.js",
+            "Full Stack Development",
+            "Web Development",
+            "Software Development"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://srcnsvr.com/#website",
+          "url": "https://srcnsvr.com",
+          "name": "Sercan Sever | Full Stack Developer Portfolio",
+          "description": "Professional portfolio of Sercan Sever, Full Stack Developer specializing in .NET Core, React, and Node.js development",
+          "publisher": {
+            "@id": "https://srcnsvr.com/#person"
+          }
+        }
+      ]
+    }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R35K5JPEPQ"></script>
   <script>

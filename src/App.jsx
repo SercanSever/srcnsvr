@@ -10,6 +10,7 @@ import Stack from "./pages/stack/stack";
 import Projects from "./pages/projects/projects";
 import ScrollToTop from "./components/scroll-top/scroll-top";
 import Workspace from "./pages/workspace/workspace";
+import NotFound from "./pages/404";
 
 // import { useNavMobileStore } from "./stores/nav-mobile";
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/stack" element={<Stack />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/workspace" element={<Workspace />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

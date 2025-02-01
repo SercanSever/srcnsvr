@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
           <div className="deploy">
             <p>Source code</p>
-            <Link to="https://github.com/" target="_blank">
+            <Link to="https://github.com/sercansever/srcnsvr" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"

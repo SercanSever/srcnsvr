@@ -13,8 +13,6 @@ import Workspace from "./pages/workspace/workspace";
 import NotFound from "./pages/404";
 import { HelmetProvider } from 'react-helmet-async';
 
-// import { useNavMobileStore } from "./stores/nav-mobile";
-
 function App() {
   const { currentTheme } = useThemeStore();
   const { updateScroll } = useScrollStore();

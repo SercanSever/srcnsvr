@@ -1,1 +1,4 @@
-Sitemap: https://wwwsrcnsvr.com/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://www.srcnsvr.com/sitemap.xml

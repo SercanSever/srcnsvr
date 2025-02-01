@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./socials.css";
 
 const Socials = () => {
   return (
     <div className="socials">
       <div className="social">
-        <a href="">
+        <Link to="https://github.com/SercanSever" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -21,10 +22,13 @@ const Socials = () => {
             <path d="M9 18c-4.51 2-5-2-7-2" />
           </svg>
           github
-        </a>
+        </Link>
       </div>
       <div className="social">
-        <a href="">
+        <Link
+          to="https://www.linkedin.com/in/sercan-sever-a97147202"
+          target="_blank"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -42,10 +46,10 @@ const Socials = () => {
             <circle cx="4" cy="4" r="2" />
           </svg>
           linkedin
-        </a>
+        </Link>
       </div>
       <div className="social">
-        <a href="">
+        <Link to="https://www.instagram.com/sercansvr" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -63,10 +67,10 @@ const Socials = () => {
             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
           </svg>
           instagram
-        </a>
+        </Link>
       </div>
       <div className="social">
-        <a href="">
+        <Link to="https://x.com/_srcnsvr" target="_blank">
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -83,7 +87,7 @@ const Socials = () => {
             <path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z"></path>
           </svg>
           twitter
-        </a>
+        </Link>
       </div>
     </div>
   );

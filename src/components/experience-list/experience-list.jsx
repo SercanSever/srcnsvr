@@ -16,7 +16,6 @@ const ExperienceList = () => {
   useEffect(() => {
     fetchExperienceContent();
   }, []);
-
   return (
     <>
       {experienceContent &&

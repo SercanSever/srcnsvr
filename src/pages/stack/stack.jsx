@@ -1,27 +1,27 @@
 import { useCallback, useEffect, useState } from "react";
 import {
-  getCategoryList,
+  //getCategoryList,
   getStackContent,
-  getStackList, 
+  getStackList,
 } from "../../data/stack/stack-repository";
 import "./stack.css";
 import { Link } from "react-router-dom";
-import MetaTags from '../../components/seo/meta-tags';
+import MetaTags from "../../components/seo/meta-tags";
 
 const Stack = () => {
   const [stackContent, setStackContent] = useState({});
-  const [categories, setCategories] = useState([]);
-  const [categoryFilter, setCategoryFilter] = useState("all");
+  //const [categories, setCategories] = useState([]);
+  //const [categoryFilter, setCategoryFilter] = useState("all");
   const [stackList, setStackList] = useState([]);
 
   const fetchInitialData = useCallback(async () => {
     try {
-      const [stackData, categoryData] = await Promise.all([
+      const [stackData] = await Promise.all([
         getStackContent(),
-        getCategoryList(),
+        //getCategoryList(),
       ]);
       setStackContent(stackData[0]);
-      setCategories(categoryData);
+      //setCategories(categoryData);
     } catch (error) {
       console.error("Error fetching initial data:", error);
     }
@@ -30,17 +30,11 @@ const Stack = () => {
   const fetchStackList = useCallback(async () => {
     try {
       const data = await getStackList();
-      if (categoryFilter === "all") {
-        setStackList(data);
-      } else {
-        setStackList(
-          data.filter((item) => item.category_id === categoryFilter)
-        );
-      }
+      setStackList(data);
     } catch (error) {
       console.error("Error fetching stack list:", error);
     }
-  }, [categoryFilter]);
+  }, []);
 
   useEffect(() => {
     fetchInitialData();
@@ -69,11 +63,11 @@ const Stack = () => {
         </h1>
         <p className="text">{stackContent.description}</p>
 
-        <div className="searchTabConteiner">
-          <button className="tab" onClick={() => setCategoryFilter("all")}>
+        {/*<div className="searchTabConteiner">
+          {/* <button className="tab" onClick={() => setCategoryFilter("all")}>
             all
-          </button>
-          {categories.map((category) => (
+          </button>*/}
+        {/* {categories.map((category) => (
             <button
               className="tab"
               key={category.id}
@@ -81,8 +75,8 @@ const Stack = () => {
             >
               {category.name}
             </button>
-          ))}
-        </div>
+          ))}*/}
+        {/*</div>*/}
         <div className="wrapper">
           <div className="cardList">
             {stackList.map((item) => (
